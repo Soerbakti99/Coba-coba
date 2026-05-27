@@ -422,7 +422,7 @@ h3 {
    Semua grid/flex berubah ke 1 kolom/baris
    agar konten tidak terlalu sempit di layar kecil.
    -------------------------------- */
-   
+
 /* Tablet & Mobile */
 @media (max-width: 768px) {
     .navbar-inner {
@@ -520,86 +520,144 @@ h3 {
 /* ================================ 
    FORMS — SILA 
    ================================*/
-.form-card { 
-    max-width: 640px; 
-    margin: 0 auto; 
-} 
- 
-fieldset { 
-    border: 1px solid #334155; 
-    border-radius: 12px; 
-    padding: 24px; 
+.form-card {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #1e293b;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    padding: 0 8px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.form-actions .btn {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.form-actions .btn-outline {
+    border: 1px solid #334155;
+    background: none;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* MENJADIKAN BATAS DEMPET DENGAN SEKITARNYA */
+    margin-top: 16px;
+    min-width: 600px;
+    /* Lebar batas mutlak */
+}
+
+.data-table caption {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    /* Memberi garis bawah di setiap akhir barisan */
+}
+
+.data-table {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table td {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Zebra Stripes */
+.data-table tbody tr:nth-child(even) {
+    background-color: rgba(30, 41, 59, 0.5); /* Warna abu-abu yang lumayan lebur transparan */
+}
+/* Hover */ 
+.data-table tbody tr:hover { 
     background-color: #1e293b; 
 } 
  
-legend { 
-    font-size: 1.1rem; 
-    font-weight: 600; 
-    color: #f1f5f9; 
-    padding: 0 8px; 
-} 
- 
-.form-group { 
-    margin-bottom: 16px; 
-} 
- 
-.form-group label { 
-    display: block; 
-    font-size: 0.875rem; 
-    font-weight: 600; 
-    color: #e2e8f0; 
-    margin-bottom: 6px; 
-}
-.form-group input, 
-.form-group select, 
-.form-group textarea { 
-    width: 100%; 
-    padding: 10px 14px; 
-    background-color: #0f172a; 
-    border: 1px solid #334155; 
-    border-radius: 8px; 
-    color: #e2e8f0; 
-    font-family: inherit; 
-    font-size: 0.9rem; 
-    outline: none; 
-    transition: border-color 0.3s; 
-} 
- 
-.form-group input:focus, 
-.form-group select:focus, 
-.form-group textarea:focus { 
-    border-color: #2563eb; 
-} 
- 
-.form-group input::placeholder, 
-.form-group textarea::placeholder { 
-    color: #64748b; 
-} 
- 
-.form-group select { 
-    cursor: pointer; 
-} 
- 
-.form-group textarea { 
-    resize: vertical; 
-    min-height: 80px; 
-}
-.form-row { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 16px; 
-}
-.form-actions { 
-display: flex; 
-gap: 12px; 
-margin-top: 24px; 
-} 
-.form-actions .btn { 
-cursor: pointer; 
-border: none; 
-font-family: inherit; 
-} 
-.form-actions .btn-outline { 
-border: 1px solid #334155; 
-background: none; 
+/* Responsif Mobile (Mengecilkan padding agar muat di HP) */ 
+@media (max-width: 768px) { 
+    .data-table { font-size: 0.8rem; } 
+    .data-table th, .data-table td { padding: 8px 10px; } 
 }
